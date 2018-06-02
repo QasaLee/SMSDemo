@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MessageUI
 
 class AttachmentTableViewController: UITableViewController {
 
@@ -49,3 +50,21 @@ class AttachmentTableViewController: UITableViewController {
 
 
 }
+
+extension AttachmentTableViewController: MFMailComposeViewControllerDelegate {
+    func messageComposeViewController(controller: MFMessageComposeViewController, didFinishWithResult result: MessageComposeResult) {
+        // Check the result or perform other tasks.
+        switch result {
+        case .cancelled:
+            print("⛹️‍♂️⛹️‍♂️⛹️‍♂️Message Canceled!")
+        case .failed:
+            print("⛹️‍♂️⛹️‍♂️⛹️‍♂️Message-sending Failed!")
+        case .sent:
+            print("⛹️‍♂️⛹️‍♂️⛹️‍♂️Message Sent!")
+        
+        }
+        // Dismiss the message compose view controller.
+        controller.dismiss(animated: true, completion: nil)}
+}
+
+

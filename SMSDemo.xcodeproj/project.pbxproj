@@ -18,6 +18,7 @@
 		F44247711DA5FE6B00F3F437 /* no more complaint.png in Resources */ = {isa = PBXBuildFile; fileRef = F442476B1DA5FE6B00F3F437 /* no more complaint.png */; };
 		F44247721DA5FE6B00F3F437 /* Why Appcoda.doc in Resources */ = {isa = PBXBuildFile; fileRef = F442476C1DA5FE6B00F3F437 /* Why Appcoda.doc */; };
 		F44247741DA5FF1100F3F437 /* AttachmentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44247731DA5FF1100F3F437 /* AttachmentTableViewController.swift */; };
+		FBD2F56420C2388C00235F9F /* AttachmentTableViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD2F56320C2388C00235F9F /* AttachmentTableViewControllerDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		F442476B1DA5FE6B00F3F437 /* no more complaint.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "no more complaint.png"; sourceTree = "<group>"; };
 		F442476C1DA5FE6B00F3F437 /* Why Appcoda.doc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Why Appcoda.doc"; sourceTree = "<group>"; };
 		F44247731DA5FF1100F3F437 /* AttachmentTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttachmentTableViewController.swift; sourceTree = "<group>"; };
+		FBD2F56320C2388C00235F9F /* AttachmentTableViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttachmentTableViewControllerDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				F442475D1DA5FE1E00F3F437 /* LaunchScreen.storyboard */,
 				F44247601DA5FE1E00F3F437 /* Info.plist */,
 				F44247731DA5FF1100F3F437 /* AttachmentTableViewController.swift */,
+				FBD2F56320C2388C00235F9F /* AttachmentTableViewControllerDelegate.swift */,
 			);
 			path = SMSDemo;
 			sourceTree = "<group>";
@@ -171,6 +174,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F44247741DA5FF1100F3F437 /* AttachmentTableViewController.swift in Sources */,
+				FBD2F56420C2388C00235F9F /* AttachmentTableViewControllerDelegate.swift in Sources */,
 				F44247551DA5FE1E00F3F437 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
