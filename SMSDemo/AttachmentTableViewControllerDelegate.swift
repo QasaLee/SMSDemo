@@ -23,20 +23,14 @@ extension AttachmentTableViewController {
             present(alertMessage, animated: true, completion: nil)
             return
         }
+        
         // SMS Filling
-        let messageController = MFMessageComposeViewController()
-        messageController.messageComposeDelegate = self
-        messageController.recipients = ["18811603673"]
+        let new = attachment.replacingOccurrences(of: " ", with: "%20")
+        print("😡😡😡😡😡😡\(new)😡😡😡😡😡😡😡😡😡😡😡😡")
         
-        let fileParts = attachment.components(separatedBy: ".")
-        let fileName = fileParts[0]
-        let fileExtension = fileParts[1]
-        let filePath = Bundle.main.path(forResource: fileName, ofType: fileExtension)
-        let fileUrl = URL(fileURLWithPath: filePath!)
-        messageController.addAttachmentURL(fileUrl, withAlternateFilename: nil)
-        
-        messageController.body = "Just sent the \(attachment) to you, check this out!"
-        present(messageController, animated: true, completion: nil)
+        if let messageUrl = URL(string: "sms:18811603673&body=\(new)") {
+            UIApplication.shared.open(messageUrl, options: [:], completionHandler: nil)
+        }
     }
     
 }
