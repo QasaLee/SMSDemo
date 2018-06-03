@@ -51,8 +51,8 @@ class AttachmentTableViewController: UITableViewController {
 
 }
 
-extension AttachmentTableViewController: MFMailComposeViewControllerDelegate {
-    func messageComposeViewController(controller: MFMessageComposeViewController, didFinishWithResult result: MessageComposeResult) {
+extension AttachmentTableViewController: MFMessageComposeViewControllerDelegate {
+    func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
         // Check the result or perform other tasks.
         switch result {
         case .cancelled:
@@ -60,7 +60,7 @@ extension AttachmentTableViewController: MFMailComposeViewControllerDelegate {
         case .failed:
             print("⛹️‍♂️⛹️‍♂️⛹️‍♂️Message-sending Failed!")
             let alertMessage = UIAlertController(title: "Failed!", message: "Failed to send this message!", preferredStyle: .actionSheet) // .alert
-            alertMessage.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            alertMessage.addAction(UIAlertAction(title: "OK in case .failed", style: .default, handler: nil))
             present(alertMessage, animated: true)
         case .sent:
             print("⛹️‍♂️⛹️‍♂️⛹️‍♂️Message Sent!")
